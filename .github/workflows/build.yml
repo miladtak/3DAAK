@@ -1,1 +1,28 @@
+name: Build Torque3D 3DAAK
 
+on:
+  push:
+    branches: [ development ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install CMake
+      uses: lukka/get-cmake@latest
+
+    - name: Configure project
+      run: cmake -S . -B build -G "Visual Studio 16 2019" -A Win32
+
+    - name: Build project
+      run: cmake --build build --config Debug
+
+    - name: Upload executable
+      uses: actions/upload-artifact@v3
+      with:
+        name: 3DAAK-Windows-EXE
+        path: build/**/Debug/*.exe
