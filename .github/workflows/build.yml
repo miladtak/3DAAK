@@ -25,4 +25,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: 3DAAK-Windows-EXE
-        path: build/My Projects/3DAAK/Debug/3DAAK_game.exe
+        path: "build/**/Debug/*.exe"
