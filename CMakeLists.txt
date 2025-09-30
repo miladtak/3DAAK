@@ -13,3 +13,6 @@ project(${TORQUE_APP_NAME})
 
 # Include Torque build system
 add_subdirectory(Tools/CMake)
+
+# ✅ Add game project directory
+add_subdirectory("My Projects/3DAAK")
