@@ -16,7 +16,7 @@ jobs:
       uses: lukka/get-cmake@latest
 
     - name: Configure project
-      run: cmake -S . -B build -G "Visual Studio 16 2019" -A Win32
+      run: cmake -S . -B build -G "Visual Studio 16 2019" -A Win32 -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
     - name: Build project
       run: cmake --build build --config Debug
