@@ -1,6 +1,6 @@
 # CMake build file list for OpenAL
 
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.5)
+cmake_minimum_required(VERSION 3.16...3.28)
 
 PROJECT(OpenAL)
 
