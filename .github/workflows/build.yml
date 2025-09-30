@@ -22,7 +22,7 @@ jobs:
       run: cmake --build build --config Debug
 
     - name: Upload executable
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: 3DAAK-Windows-EXE
         path: build/**/Debug/*.exe
